@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body { font-family: system-ui, -apple-system, "Helvetica Neue", "PingFang SC", sans-serif; }
