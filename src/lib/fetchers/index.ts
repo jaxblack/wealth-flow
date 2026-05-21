@@ -20,3 +20,18 @@ export async function fetchStockQuotes(_symbols: string[]): Promise<StockQuote[]
 export async function fetchFxRates(base = 'CNY'): Promise<FxRates> {
   return { base, rates: {}, asOf: new Date().toISOString() };
 }
+
+// Bank-specific fetchers (HKMA Open API integrations).
+export {
+  fetchBochkAccessToken,
+  fetchBochkFxRates,
+  parseBochkFxResponse,
+  BOCHK_SANDBOX_BASE,
+  BOCHK_PRODUCTION_BASE,
+  BOCHK_DEFAULT_FX_PATH,
+} from './bochk-fx';
+export type {
+  BochkFxRate,
+  BochkOAuthCreds,
+  BochkFetchOptions,
+} from './bochk-fx';
